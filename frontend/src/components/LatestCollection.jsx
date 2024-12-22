@@ -19,7 +19,7 @@ const [latestProducts,setLatestProducts] = useState([])
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam facilis dignissimos voluptas vel quis, beatae aliquid accusamus nisi laudantium id velit neque, quos molestias a iusto unde tempora sit nulla?</p>
       </div>
       {/* Rendering products */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6 ">
         {
           latestProducts.map((item,index)=>(
             <ProductItem key={index} id={item._id} image={item.image} name={item.name} Price={item.price}/>
