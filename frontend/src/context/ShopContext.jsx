@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
 
     const addToCart = async (itemId,size) => {
         if (!size) {
-            toast.error('Select Product Size');
+            toast.error(' Please select the product size');
             return
             }
 
@@ -38,15 +38,54 @@ const ShopContextProvider = (props) => {
         setCartItems(CartData);
 
     }
-    useEffect(()=>{
-       console.log(cartItems);
-       
-    },[cartItems])
+
+
+    const getcartCount =() => {
+        let totalCount = 0;
+        for(const items in cartItems){
+            for(const item in cartItems[items]){
+                try {
+                    if(cartItems[items][item]> 0){
+                        totalCount += cartItems[items][item];
+                    }
+                } catch (error) {
+                    
+                }
+            }
+        }
+        return totalCount;
+    } 
+
+    const updateQuantity = async (itemId,size,quantity)=>{
+        let CartData = structuredClone(cartItems);
+
+        CartData[itemId][size] = quantity;
+
+        setCartItems(CartData);
+    }
+
+    const getCartAmount =  () => {
+        let totalAmount = 0 ;
+        for (const items in cartItems){
+            let itemInfo = products.find((product)=> product._id === items );
+            for (const item in cartItems[items]){
+                try {
+                    if (cartItems[items][item] > 0) {
+                        totalAmount += itemInfo.price * cartItems[items][item];
+                    }
+                } catch (error) {
+                    
+                }
+            }
+        }
+        return totalAmount;
+    }
 
 
     const value ={
           products,currency,devivery_fee,search,setSearch,showSearch,setShowSearch,
-          cartItems,addToCart
+          cartItems,addToCart,
+          getcartCount,updateQuantity,getCartAmount
     }
     return (
         <ShopContext.Provider value={value}>
