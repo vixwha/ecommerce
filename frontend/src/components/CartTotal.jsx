@@ -20,12 +20,12 @@ const {currency,devivery_fee,getCartAmount} = useContext(ShopContext);
             <hr />
             <div className="flex justify-between">
                 <p>Shipping Fee</p>
-                <p>{currency}{devivery_fee}</p>
+                <p>{currency}{devivery_fee}.00</p>
             </div>
             <hr />
             <div className="flex justify-between">
                 <b>Total</b>
-                <b>{currency}{getCartAmount() === 0 ? 0 : getCartAmount() + devivery_fee}</b>
+                <b>{currency}{getCartAmount() === 0 ? 0 : getCartAmount() + devivery_fee}.00</b>
             </div>
         </div>
       
