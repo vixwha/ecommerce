@@ -36,7 +36,7 @@ const Product = () => {
       <div className="flex gap-12 sm:gap-12 flex-col sm:flex-row">
         {/* Product images */}
         <div className="flex-1 flex flex-col-reverse gap-3 sm:flex-row">
-          <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full">
+          <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-">
             {
               productData.image.map((item,index)=>(
                 <img onClick={()=>setImage(item)} src={item} key={index} className='w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer' alt="" />
@@ -44,14 +44,14 @@ const Product = () => {
             }
           </div>
           <div className="w-full sm:w-[80%]">
-            <img className='w-full h-auto' src={image} alt="" />
+            <img className='min-w-max h-auto' src={image} alt="" />
           </div>
         </div>
         
         {/* Product info */}
         <div className="flex-1 ">
           <h1 className='font-medium text-2xl mt-2'>{productData.name}</h1>
-          <div className="flex items-center gap-1 mt-2">
+          <div className="flex items-center gap-1 mt-2 ">
             <img src={assets.star_icon} alt="" className="w-3 5" />
             <img src={assets.star_icon} alt="" className="w-3 5" />
             <img src={assets.star_icon} alt="" className="w-3 5" />
