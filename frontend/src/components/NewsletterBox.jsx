@@ -9,7 +9,7 @@ const NewsletterBox = () => {
     <div className='text-center'>
         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
         <p className='text-gray-400 mt-3'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt similique dolorem natus, doloribus soluta nihil ipsam dignissimos! Accusantium rem porro fugiat deserunt nulla ullam nihil maiores eligendi minus et.
+        Subscribe to our newsletter and be the first to know about our new arrivals, exclusive offers, and special events. Join our community and enjoy insider access to the latest trends and fashion tips. Sign up now and never miss out on the excitement!
         </p>
         <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3'>
             <input className='w-full sm:flex-1 outline-none' type="email" placeholder='Enter your email' required />

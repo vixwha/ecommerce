@@ -20,7 +20,7 @@ const BestSeller = () => {
         <div className="text-center text-3xl py-8">
             <Title text1={'BEST'} text2={'SELERS'}/>
             <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quidem laudantium porro libero fugiat minus mollitia debitis nobis animi excepturi est eos reiciendis, praesentium quaerat doloribus officia aliquid ab tempore.</p>
+            Check out our most popular clothes! These top picks are stylish, comfy, and high-quality. From classic dresses to cozy sweaters and trendy jeans, these items are loved by everyone. Find out why these pieces are our bestsellers and add them to your wardrobe today.</p>
         </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
         {
