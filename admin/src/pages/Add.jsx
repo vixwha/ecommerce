@@ -90,7 +90,7 @@ const onSubmitHandler = async (e) => {
       </div>
       <div className='w-full '>
         <p className='mb-2'>product name</p>
-        <input onChange={(e)=>setName(e.target.value)} value={name} className='w-full max-w-[500px] px-3 py-2 ' type="text" placeholder='Type here' required />
+        <input onChange={(e)=>setName(e.target.value)} value={name} className='w-full max-w-[500px] px-3 py-2 '  type="text" placeholder='Type here' required />
       </div>
       <div className='w-full'>
         <p className='mb-2'>product description</p>
@@ -116,7 +116,7 @@ const onSubmitHandler = async (e) => {
         </div>
         <div>
           <p className='mb-2'>Product price</p>
-          <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="number" placeholder='250' />
+          <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="number" placeholder='250' required />
         </div>
       </div>
       <div>
@@ -143,7 +143,7 @@ const onSubmitHandler = async (e) => {
         <input onChange={() => setBestSeller(prev => !prev)} checked={bestSeller} type="checkbox" id='bestSeller' />
         <label className='cursor-pointer' htmlFor="bestSeller">Add to BestSeller</label>
       </div>
-      <button type='submit' className='w-28 mt-4 bg-black text-white'>ADD</button>
+      <button type='submit' className='w-28 mt-4 px-8 py-3 bg-black text-white  hover:bg-lime-500 hover:text-black transition-all duration-500 rounded-md'>ADD</button>
     </form>
     
   
