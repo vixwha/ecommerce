@@ -43,8 +43,8 @@ const Product = () => {
               ))
             }
           </div>
-          <div className="w-full sm:w-[80%]">
-            <img className='min-w-max h-auto' src={image} alt="" />
+          <div className="w-md sm:w-[80%]">
+            <img className='size-max' src={image} alt="" />
           </div>
         </div>
         
